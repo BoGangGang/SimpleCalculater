@@ -1,0 +1,33 @@
+LW r0 0x2
+LW r1 0x1
+SLT r2 r0 r1
+SLT r3 r0 0x5
+SLT r4 0xF r1
+SLT r5 0xF 0xFF
+BNE r2 r3 0xa
+LW r0 0x1
+LW r1 0x2
+RST
+JMP 0x16
+ADD r2 r0 r1
+LW r3 0x5
+LW r4 0xa
+MUL r5 r3 r4
+SW r2 STDOUT
+LW r0 0x10
+LW r1 0x3
+DIV r2 r0 r1
+MOV r3 r2
+LW r0 0xFF
+LW r1 0xFFFe
+LW r2 0xFFd
+LW r9 0x1
+ADD r0 r1 r2
+SW r0 STDOUT
+MOV r2 r0
+MOV r4 r2
+MOV r5 r4
+MOV r7 r5
+SW r7 STDOUT
+EOF
+
